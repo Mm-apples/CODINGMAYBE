@@ -1,0 +1,25 @@
+int rPin = 9;
+int gPin = 10;
+int bPin = 11;
+int rVal = 0;
+int gVal = 0;
+int bVal = 0;
+void setup()
+{
+  pinMode(gPin, OUTPUT);
+  pinMode(bPin, OUTPUT);
+  pinMode(rPin, OUTPUT);
+}
+
+void loop()
+{
+  analogWrite(rPin, rVal);
+  analogWrite(rPin, bVal);
+  analogWrite(rPin, gVal);
+  
+  rVal = random(0,255);
+  gVal = random(0,255);
+  bVal = random(0,255);
+  
+  delay (500);
+}
